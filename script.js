@@ -17,7 +17,8 @@ function data(e) {
 	clearbtn.classList.add("delete")
 	newRow.append(clearbtn)
 	clearbtn.addEventListener("click", ()=>deletedata(newRow))	
-}
-function deletedata(row) {
+	function deletedata(row) {
 	tbody.removeChild(row);
 }
+}
+
