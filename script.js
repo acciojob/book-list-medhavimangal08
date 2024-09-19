@@ -12,7 +12,6 @@ function data(e) {
         cell.innerText = inputs[i].value;
         inputs[i].value = '';
     }
-    let cell = newRow.insertCell(); // insert an extra cell for the delete button
 	let clearbtn=document.createElement("button")
 	clearbtn.innerText="X"
 	clearbtn.classList.add("delete")
