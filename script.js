@@ -5,20 +5,17 @@ let tbody = document.querySelector("#book-list");
 btn.addEventListener("click", data); // close the parentheses here
 
 function data(e) {
-    e.preventDefault(); // prevent the default form submission behavior
-    let newRow = tbody.insertRow(); // insert a new row
+    e.preventDefault();
+    let newRow = tbody.insertRow();
     for(let i=0; i<inputs.length; i++){
-        let cell = newRow.insertCell(); // insert a new cell
+        let cell = newRow.insertCell();
         cell.innerText = inputs[i].value;
-        inputs[i].value = ''; // clear the input field after adding the data to the table
+        inputs[i].value = '';
     }
+    let cell = newRow.insertCell(); // insert an extra cell for the delete button
 	let clearbtn=document.createElement("button")
 	clearbtn.innerText="X"
 	clearbtn.classList.add("delete")
-	newRow.append(clearbtn)
+	cell.append(clearbtn) // append the button to the new cell
 	clearbtn.addEventListener("click", ()=>deletedata(newRow))	
-	function deletedata(row) {
-	tbody.removeChild(row);
 }
-}
-
