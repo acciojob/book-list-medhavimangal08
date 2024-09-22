@@ -12,10 +12,11 @@ function data(e) {
         cell.innerText = inputs[i].value;
         inputs[i].value = ''; // clear the input field after adding the data to the table
     }
+	cell =newRow.insertCell()
 	let clearbtn=document.createElement("button")
 	clearbtn.innerText="X"
 	clearbtn.classList.add("delete")
-	newRow.append(clearbtn)
+	cell.append(clearbtn)
 	clearbtn.addEventListener("click", ()=>deletedata(newRow))	
 	function deletedata(row) {
 	tbody.removeChild(row);
