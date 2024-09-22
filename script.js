@@ -15,6 +15,6 @@ function data(e) {
 	let clearbtn=document.createElement("button")
 	clearbtn.innerText="X"
 	clearbtn.classList.add("delete")
-	cell.append(clearbtn) // append the button to the new cell
+	cell.append(clearbtn);// append the button to the new cell
 	clearbtn.addEventListener("click", ()=>deletedata(newRow))	
 }
